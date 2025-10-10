@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>zadanie 16 krajkowski</title>
+    </head>
+    <body>
+        <div style="font-size: 40px;">
+            <script>
+                var a=prompt("Podaj a=","");
+                var b=prompt("Podaj b=","");
+                //a^3 + 3a^2b + 3ab^2 + b^3
+                var ar=parseFloat(a);
+                var br=parseFloat(b);
+                let adosz=ar*ar*ar;
+                let bdosz=br*br*br;
+                let cdzia=3*a*a*b;
+                let ddzia=3*a*b*b;
+                document.write("("+a+"+"+b+")<sup>3</sup> ="+a+"<sup>3</sup>+3*"+a+"<sup>2</sup>*"+b+"+ 3*"+a+"*"+b+"<sup>2</sup>+"+b+"<sup>3</sup>")
+            </script>
+        </div>
+    </body>
+</html>
