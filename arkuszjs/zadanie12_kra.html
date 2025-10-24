@@ -1,0 +1,29 @@
+<html>
+    <body>
+        <div style="color: green; font-size: 50px;">
+            <script lang="JavaScript">
+                var D1_KRA=prompt("od jakiego dnia liczymy=","");
+                var G1_KRA=prompt("od jakiej godziny zaczynamy=","");
+                var D2_KRA=prompt("do jakiego dnia liczymy=","");
+                var G2_KRA=prompt("na jakiej godzinie konczymy=","");
+                
+                var D1_KRA2=parseFloat(D1_KRA);
+                var G1_KRA2=parseFloat(G1_KRA);
+                var D2_KRA2=parseFloat(D2_KRA);
+                var G2_KRA2=parseFloat(G2_KRA);
+                
+                let sekundy1_KRA;
+                let sekundy2_KRA;
+                let minus1_KRA;
+                let minus2_KRA;
+                let suma_KRA;
+                minus1_KRA=D1_KRA2-D2_KRA2;
+                minus2_KRA=G1_KRA2-G2_KRA2;
+                sekundy1_KRA=minus1_KRA*86400;
+                sekundy2_KRA=minus2_KRA*3600;
+                suma_KRA=sekundy1_KRA+sekundy2_KRA;
+                document.write(+suma_KRA+"<br>");
+            </script>
+        </div>
+    </body>
+</html>
