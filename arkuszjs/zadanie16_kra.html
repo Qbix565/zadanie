@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>zadanie 16 krajkowski</title>
+    </head>
+    <body>
+        <div style="font-size: 40px;">
+            <script>
+                var a_KRA=prompt("Podaj a=","");
+                var b_KRA=prompt("Podaj b=","");
+                //a^3 + 3a^2b + 3ab^2 + b^3
+                var ar_KRA=parseFloat(a_KRA);
+                var br_KRA=parseFloat(b_KRA);
+                let adosz_KRA=ar_KRA*ar_KRA*ar_KRA;
+                let bdosz_KRA=br_KRA*br_KRA*br_KRA;
+                let cdzia_KRA=3*a_KRA*a_KRA*b_KRA;
+                let ddzia_KRA=3*a_KRA*b_KRA*b_KRA;
+                let suma_KRA=adosz_KRA+bdosz_KRA+cdzia_KRA+ddzia_KRA;
+                document.write("("+a_KRA+"+"+b_KRA+")<sup>3</sup> ="+a_KRA+"<sup>3</sup>+3*"+a_KRA+"<sup>2</sup>*"+b_KRA+"+ 3*"+a_KRA+"*"+b_KRA+"<sup>2</sup>+"+b_KRA+"<sup>3</sup> ="+adosz_KRA+"+"+cdzia_KRA+"+"+ddzia_KRA+"+"+bdosz_KRA+"="+suma_KRA+"")
+            </script>
+        </div>
+    </body>
+</html>
