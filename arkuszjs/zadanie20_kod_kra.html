@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>zadanie14_kod_krajkowski</title>
+    </head>
+    <body>
+        <textarea name="kod" id="kod" cols="120" rows="52">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>zadanie20-krajkowski</title>
+</head>
+<body>
+    <script>
+        var xa_kra=parseFloat(prompt("Podaj wspolrzedna x pierwszego punktu: "));
+        var ya_kra=parseFloat(prompt("Podaj wspolrzedna y pierwszego punktu: "));
+        var xb_kra=parseFloat(prompt("Podaj wspolrzedna x drugiego punktu: "));
+        var yb_kra=parseFloat(prompt("Podaj wspolrzedna y drugiego punktu: "));
+        var xc_kra=parseFloat(prompt("Podaj wspolrzedna x trzeciego punktu: "));
+        var yc_kra=parseFloat(prompt("Podaj wspolrzedna y trzeciego punktu: "));
+    
+        var OdlegloscAB_kra=Math.sqrt((xa_kra-xb_kra)*(xa_kra-xb_kra)+(ya_kra-yb_kra)*(ya_kra-yb_kra)); 
+        var OdlegloscBC_kra=Math.sqrt((xb_kra-xc_kra)*(xb_kra-xc_kra)+(yb_kra-yc_kra)*(yb_kra-yc_kra));  
+        var OdlegloscAC_kra=Math.sqrt((xa_kra-xc_kra)*(xa_kra-xc_kra)+(ya_kra-yc_kra)*(ya_kra-yc_kra));
+        
+        document.write(`<b>Odleglosc od A do B wynosi:</b> ${OdlegloscAB_kra}<br>`);
+        document.write(`<b>Odleglosc od B do C wynosi:</b> ${OdlegloscBC_kra}<br>`);
+        document.write(`<b>Odleglosc od A do C wynosi:</b> ${OdlegloscAC_kra}<br>`);
+    </script>
+</body>
+</html>
+        </textarea>
+    </body>
+</html>
