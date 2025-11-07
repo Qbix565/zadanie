@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>zadanie 22</title>
+    </head>
+    <body>
+        <div>
+            <form action="..." name="formularz" onsubmit="pole_krajkowski(this.aa_kra.value,this.bb_kra.value);
+            obwod_krajkowski(this.aa_kra.value,this.bb_kra.value);return false">
+            Podaj a= <input size="6" name="aa_kra">
+            Podaj b= <input size="6" name="bb_kra">
+            <br>
+            <br>
+            <button type="submit" value="oblicz">oblicz</button>
+            <br>
+            <br>
+            Pole= <input name="pole" size="6">
+            Obwod= <input name="obw" size="6">
+            </form>
+            <script>
+                function pole_krajkowski(a_KRA, b_KRA){
+                    return a_KRA * b_KRA;
+                }
+                function obwod_krajkowski(a_KRA, b_KRA){
+                    return a_KRA+a_KRA+b_KRA+b_KRA;
+                }
+            </script>
+        </div>
+    </body>
+</html>
