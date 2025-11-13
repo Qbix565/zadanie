@@ -3,28 +3,33 @@
         <title>zadanie 22</title>
     </head>
     <body>
-        <div>
-            <form action="..." name="formularz" onsubmit="pole_krajkowski(this.aa_kra.value,this.bb_kra.value);
-            obwod_krajkowski(this.aa_kra.value,this.bb_kra.value);return false">
-            Podaj a= <input size="6" name="aa_kra">
-            Podaj b= <input size="6" name="bb_kra">
-            <br>
-            <br>
-            <button type="submit" value="oblicz">oblicz</button>
-            <br>
-            <br>
-            Pole= <input name="pole" size="6">
-            Obwod= <input name="obw" size="6">
-            <p>test</p>
-            </form>
-            <script>
-                function pole_krajkowski(a_KRA, b_KRA){
-                    return a_KRA * b_KRA;
-                }
-                function obwod_krajkowski(a_KRA, b_KRA){
-                    return a_KRA+a_KRA+b_KRA+b_KRA;
-                }
-            </script>
-        </div>
+        <h1>Wszystko o prostokacie</h1>
+        <form onsubmit="meow(); return false">
+            Podaj a: <input type="text" id="a_kra" name="Podaj a">
+            Podaj b: <input type="text" id="b_kra" name="Podaj b">
+            <button type="submit">Oblicz</button>
+        </form>
+        <table border="1" color="black">
+            <tr id="pokaz1"></tr>
+            <tr id="pokaz2"></tr>
+        </table>
+        <script>
+            function meow() {
+                let a_kra=parseFloat(document.getElementById("a_kra").value);
+                let b_kra=parseFloat(document.getElementById("b_kra").value);
+                pole_krajkowski(a_kra,b_kra);
+                obwod_krajkowski(a_kra,b_kra);
+            }
+            function pole_krajkowski(a_kra,b_kra){
+                let V_wynik = a_kra*b_kra
+                document.getElementById("pokaz1").innerHTML = `Pole= ${V_wynik} cm<sup>2`;
+                alert(`pole wynosi: ${V_wynik} cm<sup>2`);
+            }
+            function obwod_krajkowski(a_kra,b_kra){
+                let C_wynik = a_kra + a_kra + b_kra + b_kra;
+                document.getElementById("pokaz2").innerHTML = `Obwod= ${C_wynik} cm`;
+                alert(`Obwod wynosi: ${C_wynik} cm`)
+            }  
+        </script>
     </body>
 </html>
