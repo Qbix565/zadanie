@@ -14,9 +14,14 @@
 </head>
 <body>
   <div class="wrapper">
-    <!-- ZAMIEN src na URL do Twojego pliku .glb (kobiecego awatara) -->
+    <!--
+      ZAMIEN src na URL do Twojego pliku .glb (kobiecego awatara)
+      DODAJ ios-src wskazujący na skompilowany plik .usdz (wymagane przez iOS Quick Look).
+      Uwaga: serwer musi poprawnie serwować .usdz (CORS/Content-Type). Jeśli chcesz, mogę pomóc konwertować GLB -> USDZ.
+    -->
     <model-viewer id="mv"
-      src="https://example.com/female_avatar.glb"
+      src="https://qbix.itsarin.pl/szpont.glb"
+      ios-src="https://qbix.itsarin.pl/szpont.usdz"
       alt="Kobiecy awatar AI"
       ar
       ar-modes="webxr scene-viewer quick-look"
@@ -25,11 +30,18 @@
       environment-image="neutral"
       shadow-intensity="1"
       exposure="1">
+      <!-- Visible AR button for devices that use model-viewer AR flow -->
       <button slot="ar-button">Umieść AI obok mnie (AR)</button>
+
+      <!--
+        Anchor used by iOS Safari / Quick Look. Keep href pointing to your .usdz file.
+        model-viewer will show the AR UI and iOS will open Quick Look via this rel="ar" link.
+      -->
+      <a href="https://qbix.itsarin.pl/szpont.usdz" rel="ar" slot="ar-button" aria-hidden="true"></a>
     </model-viewer>
 
     <p>
-      Tip: na telefonie wciśnij "Umieść AI obok mnie", przesuń model w miejsce obok siebie. 
+      Tip: na telefonie wciśnij "Umieść AI obok mnie", przesuń model w miejsce obok siebie.
       Jeśli chcesz, mogę pokazać jak dodać animacje, dźwięk (rozmowę) i interakcje głosowe.
     </p>
   </div>
