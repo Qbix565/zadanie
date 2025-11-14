@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>zadanie 24</title>
+    </head>
+    <body>
+            
+        <script>
+            let imie = 5/7;
+            let x1_kra_stopnie=parseFloat(prompt("Podaj x1: "));
+            let x2_kra=parseFloat(prompt("Podaj x2: "));
+            let x1_kra_radiany=x1_kra_stopnie/57.2957795;
+
+            document.write(`x1 = ${x1_kra_stopnie}&nbsp&nbsp&nbsp&nbsp&nbspx2 = ${x2_kra}<br>`);
+            document.write(`x1 = ${x1_kra_stopnie}&nbsp&nbsp&nbsp&nbsp&nbspx1 = ${x1_kra_radiany.toFixed(2)}<br>`);
+            let y1_kra = 3*Math.pow(x1_kra_stopnie, imie);
+            document.write(`y1 = ${y1_kra.toFixed(2)}<br>`);
+            let y2_kra = 2*Math.cos(x1_kra_radiany)+3*Math.sin(x1_kra_radiany);
+            document.write(`y2 = ${y2_kra.toFixed(2)}<br>`);
+            let y3_kra = Math.cbrt((x1_kra_stopnie*x1_kra_stopnie*x1_kra_stopnie*x1_kra_stopnie*x1_kra_stopnie)+2*(x2_kra*x2_kra*x2_kra*x2_kra)*Math.abs(x1_kra_stopnie-x2_kra));
+            document.write(`y3 = ${y3_kra.toFixed(2)}<br>`);
+        </script>
+    </body>
+</html>
