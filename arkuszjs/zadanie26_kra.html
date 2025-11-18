@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>zadanie 26</title>
+</head>
+<body>
+
+<h3>Oblicz pole i obwód trapezu równoramiennego</h3>
+
+<form onsubmit="temp(); return false">
+    Podaj a (górna podstawa): <input type="text" id="a_kra"><br>
+    Podaj b (dolna podstawa): <input type="text" id="b_kra"><br>
+    Podaj h (wysokość): <input type="text" id="h_kra"><br><br>
+    <button type="submit">Oblicz</button>
+</form>
+
+<form>
+    Pole trapezu: <input type="text" id="wynik_pole_kra"><br>
+    Obwód trapezu: <input type="text" id="wynik_obw_kra"><br>
+</form>
+
+<script>
+function temp() {
+    let a_kra = parseFloat(document.getElementById("a_kra").value);
+    let b_kra = parseFloat(document.getElementById("b_kra").value);
+    let h_kra = parseFloat(document.getElementById("h_kra").value);
+
+    Pow_kowalski(a_kra, b_kra, h_kra);
+    Obw_kowalski(a_kra, b_kra, h_kra);
+}
+
+function Pow_kowalski(a_kra, b_kra, h_kra) {
+    let pole_kra = ((a_kra + b_kra) * h_kra) / 2;
+    document.getElementById("wynik_pole_kra").value = pole_kra.toFixed(2);
+    alert("Pole = " + pole_kra.toFixed(2));
+}
+
+function Obw_kowalski(a_kra, b_kra, h_kra) {
+    let roznica_kra = Math.abs(a_kra - b_kra);
+    let ramie_kra = Math.sqrt((roznica_kra/2)**2 + h_kra*h_kra);
+    let obwod_kra = a_kra + b_kra + 2*ramie_kra;
+
+    document.getElementById("wynik_obw_kra").value = obwod_kra.toFixed(2);
+    alert("Obwód = " + obwod_kra.toFixed(2));
+}
+</script>
+
+</body>
+</html>
