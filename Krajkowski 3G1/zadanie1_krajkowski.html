@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>zadanie1</title>
+</head>
+<body>
+    <form onsubmit="temp(); return false">
+        Podaj D= <input type="text" id="d_kra"><br>
+        Podaj H= <input type="text" id="h_kra"><br>
+        <button type="submit">oblicz-krajkowski</button>
+    </form>
+
+    <form>
+        dlugosc na ziemi= <input type="text" id="dl_kra"><br>
+        Alfa= <input type="text" id="kat_kra"><br> 
+    </form>
+
+    <script>
+        function temp() {
+            let d_kra = parseFloat(document.getElementById("d_kra").value);
+            let h_kra = parseFloat(document.getElementById("h_kra").value);
+
+            dlnaziemi(d_kra, h_kra);
+            alfa(d_kra, h_kra);
+        }
+
+        function dlnaziemi(d_kra, h_kra) {
+            let ziemia = (d_kra*d_kra)-(h_kra*h_kra);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h1>Trojkat rownoboczny to nie trudne</h1>
+            <form onsubmit="temp1(); return false" >
+            Podaj dlugosc boku: <input type="text" id="dl_kra">
+            <button type="submit">oblicz Pole</button>
+        </form>
+        <form onsubmit="temp2(); return false">
+            <button type="submit">oblicz obwod</button>
+        </form>
+
+        <script>
+            function temp1(){
+                let dl_kra = parseFloat(document.getElementById("dl_kra").value);
+
+                pole(dl_kra);
+            }
+            function pole(dl_kra) {
+                let pole=((dl_kra*dl_kra)*Math.sqrt(3))/4;
+                document.write(`Pole trojkata rownobocznego=${pole} cm2`)
+            }
+        </script>
+    </body>
+</html>

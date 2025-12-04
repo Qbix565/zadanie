@@ -1,0 +1,33 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <p style="font-size: 2.5cm;">Wypisz zmienne czcionką 2,5cm niebieskie</p>
+        <div style="font-size: 2.5cm; color: blue;">
+            <script>
+                let xo_kra=parseFloat(prompt(`xo=`));
+                let yo_kra=parseFloat(prompt(`yo=`));
+                let A_kra=parseFloat(prompt(`A=`));
+                let B_kra=parseFloat(prompt(`B=`));
+                let C_kra=parseFloat(prompt(`C=`));
+                let x1_kra=parseFloat(prompt(`x1=`));
+                let x2_kra=parseFloat(prompt(`x2=`));
+                
+                document.write(`xo= ${xo_kra}<br>`);
+                document.write(`yo= ${yo_kra}<br>`);
+                document.write(`A= ${A_kra}<br>`);
+                document.write(`B= ${B_kra}<br>`);
+                document.write(`C= ${C_kra}<br>`);
+                document.write(`x1= ${x1_kra}<br>`);
+                document.write(`x2= ${x2_kra}<br>`);
+
+                let d_kra = (Math.abs(A_kra * xo_kra + B_kra *yo_kra + C_kra))/(Math.sqrt((A_kra*A_kra)+(B_kra*B_kra)));
+                document.write(`D= ${d_kra}<br>`);
+
+                let y_kra = ((Math.sin(x1_kra)*Math.sin(x1_kra))+(Math.cos(x2_kra)*Math.cos(x2_kra)))*Math.abs(x1_kra - x2_kra * x2_kra)/Math.PI;
+                document.write(`y= ${y_kra.toFixed(2)}`)
+            </script>
+        </div>
+    </body>
+</html>
