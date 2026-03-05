@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>zadanie32_kod_krajkowski</title>
+    </head>
+    <body>
+        <textarea name="kod" id="kod" cols="120" rows="52">
+<!DOCTYPE html>
+<html> 
+    <head> 
+        <script type="text/javascript"> 
+            function klient(nazwisko_k,imie_k,zawod_k) {
+                this.nazwisko=nazwisko_k; 
+                this.imie=imie_k; 
+                this.zawod=zawod_k;   
+            }
+            
+            klient.prototype.wypisz = function () {
+                alert(this.nazwisko + ' ' + this.imie+ ' ' + this.zawod); 
+            }; 
+            
+            var osoba1 = new klient("Krajkowski", "Jakub", "Informatyk");
+            var osoba2 = new klient('Nowak', 'Anna', 'sekretarka'); 
+            var owoc = new klient('Jabłko', 'Czerwone', 'Owoc');
+            
+            osoba1.wypisz();
+            osoba2.wypisz(); 
+            owoc.wypisz();
+            
+            document.write("dostęp do właściwości"+"<br>"); 
+            document.write("klient pierwszy"+"   "+osoba1.nazwisko+"   "+osoba1.imie+"   "+osoba1.zawod); 
+            document.write(`<br>Obiekt drugi: ${owoc.imie} ${owoc.zawod} ${owoc.nazwisko}`);
+        </script> 
+    </head> 
+    <body> 
+        <br> 
+        programowanie obiektowe   
+    </body> 
+</html>
+        </textarea>
+    </body>
+</html>

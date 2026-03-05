@@ -1,0 +1,77 @@
+<html>
+    <head>
+        <title>zadanie31-krajkowski</title>
+        <script type="text/javascript">
+            function spodnie(rodzaj_s, rozmiar_s, kolor_s, cena_s) {
+                this.rodzaj = rodzaj_s;
+                this.rozmiar = rozmiar_s;
+                this.kolor = kolor_s;
+                this.cena = cena_s;
+            }
+            
+            spodnie.prototype.spodnie_wyswietl_krajkowski = function() {
+                document.write("<p>Rodzaj: " + this.rodzaj + "</p>");
+                document.write("<p>Rozmiar: " + this.rozmiar + "</p>");
+                document.write("<p>Kolor: " + this.kolor + "</p>");
+                document.write("<p>Cena: " + this.cena + " PLN</p>");
+                if(this.marka) {
+                    document.write("<p>Marka: " + this.marka + "</p>");
+                }
+                document.write("<hr>");
+            };
+            
+            spodnie.prototype.marka = "";
+            
+            spodnie.prototype.spodnie_pokaz_krajkowski = function() {
+                alert("Obiekt: spodnie\n" + 
+                      "Rodzaj: " + this.rodzaj + "\n" +
+                      "Rozmiar: " + this.rozmiar + "\n" +
+                      "Kolor: " + this.kolor + "\n" +
+                      "Cena: " + this.cena + " PLN\n" +
+                      "Marka: " + this.marka);
+            };
+            
+            var spodnie1 = new spodnie("Jeans", "32", "Niebieski", 150);
+            spodnie1.marka = "Levis";
+            
+            var spodnie2 = new spodnie("Materiałowe", "L", "Czarny", 200);
+            spodnie2.marka = "Reserved";
+            
+            var spodnie3 = new spodnie("Sportowe", "M", "Szary", 120);
+            spodnie3.marka = "Adidas";
+        </script>
+    </head>
+    <body>
+        <h2>Zadanie 31 - Krajkowski nr 13 Programowanie obiektowe - Spodnie</h2>
+        <p><b>Obiekt: spodnie (z zadania 30) + rozszerzenia</b></p>
+        
+        <script type="text/javascript">
+            document.write("<h3>Informacje o obiekcie:</h3>");
+            document.write("<p><b>Nazwa obiektu:</b> spodnie</p>");
+            document.write("<p><b>Pola w ciele obiektu:</b> rodzaj, rozmiar, kolor, cena</p>");
+            document.write("<p><b>Nowe pole dodane POZA ciałem obiektu (prototype):</b> marka</p>");
+            document.write("<p><b>Metoda z zadania 30:</b> spodnie_wyswietl_krajkowski()</p>");
+            document.write("<p><b>Nowa metoda dodana POZA ciałem obiektu (prototype):</b> spodnie_pokaz_krajkowski()</p>");
+            
+            document.write("<h3>Lista spodni z nową właściwością 'marka':</h3>");
+            spodnie1.spodnie_wyswietl_krajkowski();
+            spodnie2.spodnie_wyswietl_krajkowski();
+            spodnie3.spodnie_wyswietl_krajkowski();
+            
+            document.write("<h3>Wywołanie nowej metody spodnie_pokaz_krajkowski():</h3>");
+            document.write("<button onclick='spodnie1.spodnie_pokaz_krajkowski()'>Pokaż spodnie1</button> ");
+            document.write("<button onclick='spodnie2.spodnie_pokaz_krajkowski()'>Pokaż spodnie2</button> ");
+            document.write("<button onclick='spodnie3.spodnie_pokaz_krajkowski()'>Pokaż spodnie3</button>");
+            
+            document.write("<h3>Dostęp do właściwości:</h3>");
+            document.write("<p>spodnie1.rodzaj = " + spodnie1.rodzaj + "</p>");
+            document.write("<p>spodnie1.rozmiar = " + spodnie1.rozmiar + "</p>");
+            document.write("<p>spodnie1.kolor = " + spodnie1.kolor + "</p>");
+            document.write("<p>spodnie1.cena = " + spodnie1.cena + " PLN</p>");
+            document.write("<p>spodnie1.marka = " + spodnie1.marka + " (dodane przez prototype)</p>");
+        </script>
+    </body>
+</html>
+        </ul>
+    </body>
+</html>
