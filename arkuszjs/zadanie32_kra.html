@@ -1,27 +1,35 @@
-<html> 
-     <head> 
-           <script type="text/javascript"> 
-              function klient(nazwisko_k,imie_k,zawod_k)
-  { 
-   this.nazwisko=nazwisko_k; 
-   this.imie=imie_k; 
-   this.zawod=zawod_k;   
-  } 
-              klient.prototype.wypisz = function ()
-      { 
-         alert(this.nazwisko + ' ' + this.imie+ ' ' + this.zawod); 
-      }; 
-  var osoba1 = new klient("Krajkowski", "Jakub", "Informatyk");
-  var osoba2 = new klient('Nowak', 'Anna', 'sekretarka'); 
-  var owoc = new klient('Jabłko', 'Czerwone', 'Owoc');
-  osoba1.wypisz();
-  osoba2.wypisz(); 
-  owoc.wypisz();
-   document.write("dostęp do właściwości"+"<br>"); 
-   document.write("klient pierwszy"+"   "+osoba1.nazwisko+"   "+osoba1.imie+"   "+osoba1.zawod); 
-   document.write(`<br>Obiekt drugi: ${owoc.imie} ${owoc.zawod} ${owoc.nazwisko}`);
-            </script> 
-     </head> 
-<body>   
-</body> 
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Zadanie 32</title>
+    <script type="text/javascript">
+        function spodnie(typ, rozmiar, barwa, koszt) {
+            this.rodzaj = typ;
+            this.rozmiar = rozmiar;
+            this.kolor = barwa;
+            this.cena = koszt;
+        }
+
+        spodnie.prototype.spodnie_pokaz_krajkowski = function() {
+            document.write("<p>Produkt: " + this.rodzaj + " | Rozmiar: " + this.rozmiar + " | Kolor: " + this.kolor + " | Cena: " + this.cena + " PLN</p><hr>");
+        };
+
+        var para1 = new spodnie("Jeansy", "M", "Niebieski", 120);
+        var para2 = new spodnie("Bojówki", "L", "Zielony", 180);
+        var para3 = new spodnie("Sztruksy", "S", "Brązowy", 95);
+    </script>
+</head>
+<body>
+    <script type="text/javascript">
+        document.write("<h3>Zestawienie dostępnych modeli:</h3>");
+        document.write("Model 1: " + para1.rodzaj + ", cena: " + para1.cena + "<br>");
+        document.write("Model 2: " + para2.rodzaj + ", cena: " + para2.cena + "<br>");
+        document.write("Model 3: " + para3.rodzaj + ", cena: " + para3.cena + "<br>");
+
+        document.write("<h3>Pełna specyfikacja towaru:</h3>");
+        para1.spodnie_pokaz_krajkowski();
+        para2.spodnie_pokaz_krajkowski();
+        para3.spodnie_pokaz_krajkowski();
+    </script>
+</body>
 </html>
