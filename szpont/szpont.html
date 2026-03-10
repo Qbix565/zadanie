@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>Quiz Niemiecki</title>
+
+<style>
+body{
+font-family: Arial;
+background:#f3f5f7;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+}
+
+#quiz{
+background:white;
+padding:30px;
+border-radius:12px;
+width:600px;
+box-shadow:0 10px 20px rgba(0,0,0,0.1);
+}
+
+#counter{
+font-size:14px;
+color:#666;
+margin-bottom:10px;
+}
+
+.option{
+padding:12px;
+margin:8px 0;
+border:2px solid #ccc;
+border-radius:8px;
+cursor:pointer;
+}
+
+.option:hover{
+background:#f0f0f0;
+}
+
+.correct{
+border-color:green;
+background:#d4f7d4;
+}
+
+.wrong{
+border-color:red;
+background:#ffd6d6;
+}
+
+button{
+margin-top:20px;
+padding:10px 20px;
+font-size:16px;
+border:none;
+border-radius:8px;
+background:#3b82f6;
+color:white;
+cursor:pointer;
+}
+
+button:disabled{
+background:#aaa;
+}
+</style>
+
+</head>
+<body>
+
+<div id="quiz">
+
+<div id="counter"></div>
+
+<h2 id="question"></h2>
+
+<div id="answers"></div>
+
+<button id="nextBtn" disabled>Następne pytanie</button>
+
+</div>
+
+<script>
+
+const words = [
+
+["poddasze","das Dachgeschoss"],
+["zasięg","der Empfang"],
+["domek ogrodowy","das Gartenhaus"],
+["łącze internetowe","der Internetanschluss"],
+["piwnica","der Keller"],
+["meble kuchenne","die Küchenmöbel"],
+["meble","die Möbel"],
+["wymarzone mieszkanie","die Traumwohnung"],
+["urządzać","einrichten"],
+["należeć","gehören"],
+["malować","streichen"],
+["przekonywać","überzeugen"],
+["przebudowywać","umbauen"],
+["przeprowadzać się","umziehen"],
+["ciemny","dunkel"],
+["własny","eigen"],
+["brakujący","fehlend"],
+["wilgotny","feucht"],
+["przytulny","gemütlich"],
+["jasny","hell"],
+["nietypowy","ungewöhnlich"],
+["podłoga","der Fußboden"],
+["okno","das Fenster"],
+["szuflada","die Schublade"],
+["dywan","der Teppich"],
+["drzwi","die Tür"],
+["ściana","die Wand"],
+["zmieniać","ändern"],
+["wisieć","hängen"],
+["leżeć","liegen"],
+["wkładać","stecken"],
+["stać","stehen"],
+["przemeblowywać","umräumen"],
+["przestawiać","umstellen"],
+["za","hinter"],
+["obok","neben"],
+["nad","über"],
+["pod","unter"],
+["między","zwischen"],
+["ryba","der Fisch"],
+["żaba","der Frosch"],
+["gekon","der Gecko"],
+["chomik","der Hamster"],
+["kanarek","der Kanarienvogel"],
+["królik","das Kaninchen"],
+["mysz","die Maus"],
+["świnka morska","das Meerschweinchen"],
+["papuga","der Papagei"],
+["szczur","die Ratte"],
+["żółw","die Schildkröte"],
+["wąż","die Schlange"],
+["obowiązek","die Pflicht"],
+["uważać","aufpassen"],
+["gryźć","beißen"],
+["karmić","füttern"],
+["troszczyć się","sich kümmern"],
+["głaskać","streicheln"],
+["drapać","zerkratzen"],
+["iść na spacer","Gassi gehen"],
+["gospodarstwo rolne","der Bauernhof"],
+["okolica","die Gegend"],
+["krowa","die Kuh"],
+["koń","das Pferd"],
+["kucyk","das Pony"],
+["świnia","das Schwein"],
+["koza","die Ziege"],
+["połączenie komunikacyjne","die Verkehrsverbindung"],
+["zbierać plony","ernten"],
+["hodować","halten"],
+["tęsknić","vermissen"]
+
+];
+
+let current = 0;
+let score = 0;
+
+const question = document.getElementById("question");
+const answers = document.getElementById("answers");
+const nextBtn = document.getElementById("nextBtn");
+const counter = document.getElementById("counter");
+
+function shuffle(arr){
+return arr.sort(()=>Math.random()-0.5);
+}
+
+function loadQuestion(){
+
+answers.innerHTML="";
+nextBtn.disabled=true;
+
+let word = words[current];
+
+counter.textContent = "Pytanie " + (current+1) + " / " + words.length;
+
+question.textContent="Co znaczy: "+word[0]+" ?";
+
+let options=[word[1]];
+
+while(options.length<4){
+let rand = words[Math.floor(Math.random()*words.length)][1];
+if(!options.includes(rand)){
+options.push(rand);
+}
+}
+
+options = shuffle(options);
+
+options.forEach(opt=>{
+
+let div=document.createElement("div");
+div.textContent=opt;
+div.className="option";
+
+div.onclick=()=>{
+
+let all=document.querySelectorAll(".option");
+all.forEach(o=>o.onclick=null);
+
+if(opt===word[1]){
+div.classList.add("correct");
+score++;
+}else{
+div.classList.add("wrong");
+
+all.forEach(o=>{
+if(o.textContent===word[1]){
+o.classList.add("correct");
+}
+});
+}
+
+nextBtn.disabled=false;
+
+};
+
+answers.appendChild(div);
+
+});
+
+}
+
+nextBtn.onclick=()=>{
+
+current++;
+
+if(current>=words.length){
+
+counter.textContent="";
+
+question.textContent="Koniec quizu 🎉";
+
+answers.innerHTML="<h3>Twój wynik: "+score+" / "+words.length+"</h3>";
+
+nextBtn.style.display="none";
+
+return;
+}
+
+loadQuestion();
+
+}
+
+loadQuestion();
+
+</script>
+
+</body>
+</html>
