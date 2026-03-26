@@ -2,7 +2,7 @@
 <html lang="pl">
 <head>
 <meta charset="UTF-8">
-<title>Quiz Niemiecki</title>
+<title>Quiz OOP</title>
 
 <style>
 body{
@@ -12,13 +12,14 @@ display:flex;
 justify-content:center;
 align-items:center;
 height:100vh;
+margin:0;
 }
 
 #quiz{
 background:white;
 padding:30px;
 border-radius:12px;
-width:600px;
+width:800px;
 box-shadow:0 10px 20px rgba(0,0,0,0.1);
 }
 
@@ -28,12 +29,18 @@ color:#666;
 margin-bottom:10px;
 }
 
+#question{
+font-size:22px;
+margin-bottom:15px;
+}
+
 .option{
 padding:12px;
 margin:8px 0;
 border:2px solid #ccc;
 border-radius:8px;
 cursor:pointer;
+line-height:1.4;
 }
 
 .option:hover{
@@ -85,76 +92,26 @@ background:#aaa;
 
 const words = [
 
-["poddasze","das Dachgeschoss"],
-["zasięg","der Empfang"],
-["domek ogrodowy","das Gartenhaus"],
-["łącze internetowe","der Internetanschluss"],
-["piwnica","der Keller"],
-["meble kuchenne","die Küchenmöbel"],
-["meble","die Möbel"],
-["wymarzone mieszkanie","die Traumwohnung"],
-["urządzać","einrichten"],
-["należeć","gehören"],
-["malować","streichen"],
-["przekonywać","überzeugen"],
-["przebudowywać","umbauen"],
-["przeprowadzać się","umziehen"],
-["ciemny","dunkel"],
-["własny","eigen"],
-["brakujący","fehlend"],
-["wilgotny","feucht"],
-["przytulny","gemütlich"],
-["jasny","hell"],
-["nietypowy","ungewöhnlich"],
-["podłoga","der Fußboden"],
-["okno","das Fenster"],
-["szuflada","die Schublade"],
-["dywan","der Teppich"],
-["drzwi","die Tür"],
-["ściana","die Wand"],
-["zmieniać","ändern"],
-["wisieć","hängen"],
-["leżeć","liegen"],
-["wkładać","stecken"],
-["stać","stehen"],
-["przemeblowywać","umräumen"],
-["przestawiać","umstellen"],
-["za","hinter"],
-["obok","neben"],
-["nad","über"],
-["pod","unter"],
-["między","zwischen"],
-["ryba","der Fisch"],
-["żaba","der Frosch"],
-["gekon","der Gecko"],
-["chomik","der Hamster"],
-["kanarek","der Kanarienvogel"],
-["królik","das Kaninchen"],
-["mysz","die Maus"],
-["świnka morska","das Meerschweinchen"],
-["papuga","der Papagei"],
-["szczur","die Ratte"],
-["żółw","die Schildkröte"],
-["wąż","die Schlange"],
-["obowiązek","die Pflicht"],
-["uważać","aufpassen"],
-["gryźć","beißen"],
-["karmić","füttern"],
-["troszczyć się","sich kümmern"],
-["głaskać","streicheln"],
-["drapać","zerkratzen"],
-["iść na spacer","Gassi gehen"],
-["gospodarstwo rolne","der Bauernhof"],
-["okolica","die Gegend"],
-["krowa","die Kuh"],
-["koń","das Pferd"],
-["kucyk","das Pony"],
-["świnia","das Schwein"],
-["koza","die Ziege"],
-["połączenie komunikacyjne","die Verkehrsverbindung"],
-["zbierać plony","ernten"],
-["hodować","halten"],
-["tęsknić","vermissen"]
+["Polimorfizm", "Wielopostaciowość – ta sama metoda działa inaczej w różnych klasach."],
+["Słowo \"this\"", "Wskazuje na bieżący obiekt (instancję), w kontekście którego wywołano kod."],
+["Tworzenie obiektów", "Za pomocą operatora new (z klasą/konstruktorem) lub zapisu literalnego {}."],
+["Metoda to", "Funkcja zdefiniowana wewnątrz klasy lub obiektu."],
+["Hermetyzacja", "Ukrywanie wnętrza obiektu i udostępnianie tylko niezbędnego interfejsu (metod)."],
+["Paradygmaty", "Obiektowe, strukturalne, funkcyjne."],
+["Cechy obiektu", "Posiada stan (pola/właściwości) i zachowanie (metody)."],
+["Klasa", "Szablon (wzorzec), na podstawie którego tworzone są obiekty."],
+["Przypisanie wartości", "obiekt.pole = \"tekst\";"],
+["Konstruktor", "Metoda wywoływana automatycznie przy tworzeniu obiektu (słowo new), inicjalizuje pola."],
+["Właściwości zapisywane w", "Polach (atrybutach) obiektu."],
+["Programowanie strukturalne", "Opiera się na funkcjach i hierarchicznym podziale kodu (brak goto)."],
+["Zdefiniowane klasy mogą", "Dziedziczyć po innych klasach (extends) i tworzyć wiele instancji."],
+["Stwierdzenie o OOP", "Łączy dane i logikę w jedną całość (obiekt)."],
+["Destruktor", "Metoda usuwająca obiekt (w JS proces ten wykonuje automatycznie Garbage Collector)."],
+["Wyświetlanie obiektu", "console.log(nazwaObiektu);"],
+["Linia kodu", "Wywołuje metodę moze_jednak obiektu niewiem i przypisuje wynik do a_kuku."],
+["Prototype", "Służy do dodawania metod i właściwości do wszystkich instancji danej klasy."],
+["Ile metod/pól", "Pola to zmienne (np. this.x), metody to funkcje (np. oblicz())."],
+["Dziedziczenie", "Przejmowanie właściwości i metod klasy nadrzędnej (bazowej) przez klasę pochodną."]
 
 ];
 
@@ -179,7 +136,7 @@ let word = words[current];
 
 counter.textContent = "Pytanie " + (current+1) + " / " + words.length;
 
-question.textContent="Co znaczy: "+word[0]+" ?";
+question.textContent="Co oznacza: " + word[0] + " ?";
 
 let options=[word[1]];
 
