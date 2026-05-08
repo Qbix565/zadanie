@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <title>Krajkowski Z41_JS</title>
+    <meta charset="utf-8" />
+    <style>
+      h1 {
+        text-transform: uppercase;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Proste działania</h1>
+    <br />
+    <h1>Krajkowski 3G</h1>
+    <label for="a">Podaj pierwszą liczbę:</label>
+    <input type="number" id="a" />
+    <br />
+    <br />
+    <label for="b">Podaj drugą liczbę:</label>
+    <input type="number" id="b" />
+    <br />
+    <br />
+    <input type="button" value="DODAWANIE" onclick="suma_kraj()" />
+    <input type="button" value="ODEJMOWANIE" onclick="roznica_kraj()" />
+    <input type="button" value="MNOŻENIE" onclick="iloczyn_kraj()" />
+    <input type="button" value="DZIELENIE" onclick="iloraz_kraj()" />
+    <input type="button" value="TEORIA" onclick="teoria_kraj()" />
+    <div id="wynik" style="margin-top: 20px"></div>
+    <script>
+            function suma_kraj() {
+              var a = document.getElementById("a").value;
+              var b = document.getElementById("b").value;
+              if (a == "" || b == "") {
+                document.getElementById("wynik").innerHTML =
+                  "Proszę uzupełnić obie liczby.";
+              } else {
+                a = parseFloat(a);
+                b = parseFloat(b);
+                var suma = a + b;
+                document.getElementById("wynik").innerHTML =
+                  "Wynik działania wynosi: " + suma;
+              }
+            }
+
+            function roznica_kraj() {
+              var a = document.getElementById("a").value;
+              var b = document.getElementById("b").value;
+              if (a == "" || b == "") {
+                document.getElementById("wynik").innerHTML =
+                  "Proszę uzupełnić obie liczby.";
+              } else {
+                a = parseFloat(a);
+                b = parseFloat(b);
+                var roznica = a - b;
+                document.getElementById("wynik").innerHTML =
+                  "Wynik działania wynosi: " + roznica;
+              }
+            }
+
+            function iloczyn_kraj() {
+              var a = document.getElementById("a").value;
+              var b = document.getElementById("b").value;
+              if (a == "" || b == "") {
+                document.getElementById("wynik").innerHTML =
+                  "Proszę uzupełnić obie liczby.";
+              } else {
+                a = parseFloat(a);
+                b = parseFloat(b);
+                var iloczyn = a * b;
+                document.getElementById("wynik").innerHTML =
+                  "Wynik działania wynosi: " + iloczyn;
+              }
+            }
+
+            function iloraz_kraj() {
+              var a = document.getElementById("a").value;
+              var b = document.getElementById("b").value;
+              if (a == "" || b == "") {
+                document.getElementById("wynik").innerHTML =
+                  "Proszę uzupełnić obie liczby.";
+              } else {
+                a = parseFloat(a);
+                b = parseFloat(b);
+                if (b == 0) {
+                  document.getElementById("wynik").innerHTML =
+                    "Nie wolno dzielić przez zero.";
+                } else {
+                  var iloraz = a / b;
+                  document.getElementById("wynik").innerHTML =
+                    "Wynik działania wynosi: " + iloraz;
+                }
+              }
+            }
+            function teoria_kraj()
+      {
+        document.write(`<p style="color: green; font-size: 24px;">pierwsza linia teorii</p>`);
+        document.write(`<p style="color: red; font-size: 24px;">&lt;label for=&quot;a&quot;&gt;Podaj pierwszą liczbę:&lt;/label&gt;&lt;input type=&quot;number&quot; id=&quot;a&quot; /&gt;</p>`);
+        document.write(`<p style='color: green; font-size: 24px;'>Tworzy etykietę i pole do wpisania liczby, powiązane przez atrybut for/id.</p>`);
+        document.write(`<p style="color: red; font-size: 24px;">&lt;input type=&quot;button&quot; value=&quot;DODAWANIE&quot; onclick=&quot;suma()&quot;&gt;</p>`);
+        document.write(`<p style='color: green; font-size: 24px;'>Wykonanie przycisku o nazwie DODAWANIE i z takim samym napisem, kliknięcie myszką uruchamia funkcję suma().</p>`);
+        document.write(`<p style="color: red; font-size: 24px;">var a = document.getElementById(&quot;a&quot;).value;</p>`);
+        document.write(`<p style='color: green; font-size: 24px;'>Wpisanie do zmiennej "a" wartości z elementu o Id "a" (zbieżność nazw).</p>`);
+        document.write(`<p style="color: red; font-size: 24px;">if (a == "" || b == "")</p>`);
+        document.write(`<p style='color: green; font-size: 24px;'>Sprawdzenie czy pola "a" lub "b" są puste.</p>`);
+        document.write(`<p style="color: red; font-size: 24px;">document.getElementById(&quot;wynik&quot;).innerHTML = "Wynik działania wynosi: " + suma;</p>`);
+        document.write(`<p style='color: green; font-size: 24px;'>Pobranie wartości Id o nazwie "wynik" i wyprowadzenie w oknie przeglądarki tekstu "Wynik działania wynosi: " oraz wartości zmiennej suma.</p>`);
+      }
+    </script>
+  </body>
+</html>
+<!-- Krajkowski 3G -->

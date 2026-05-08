@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>zadanie27_kod_krajkowski</title>
+    </head>
+    <body>
+        <textarea name="kod" id="kod" cols="120" rows="52">
+<!DOCTYPE html>
+<html>
+<head>
+    <title>zadanie 27</title>
+</head>
+<body>
+
+<h3>Obliczenia wysokości i kąta startu samolotu</h3>
+
+<form onsubmit="temp(); return false">
+    Podaj odl_kra (odległość Artura i Dawida): <input type="text" id="odl_kra"><br>
+    Podaj s_kra (droga samolotu): <input type="text" id="s_kra"><br><br>
+    <button type="submit">Oblicz</button>
+</form>
+
+<form>
+    Wysokość h_kra: <input type="text" id="h_kra"><br>
+    Kąt startu kat_kra: <input type="text" id="kat_kra"><br>
+</form>
+
+<script>
+function temp() {
+    let odl_kra = parseFloat(document.getElementById("odl_kra").value);
+    let s_kra   = parseFloat(document.getElementById("s_kra").value);
+
+    wys_kowalski(odl_kra, s_kra);
+    kat_kowalski(odl_kra, s_kra);
+}
+
+function wys_kowalski(odl_kra, s_kra) {
+    let h_obl_kra = Math.sqrt(s_kra*s_kra - odl_kra*odl_kra);
+    document.getElementById("h_kra").value = h_obl_kra.toFixed(2);
+    alert("Wysokość h_kra = " + h_obl_kra.toFixed(2));
+}
+
+function kat_kowalski(odl_kra, s_kra) {
+    let h_obl_kra = Math.sqrt(s_kra*s_kra - odl_kra*odl_kra);
+    let kat_obl_kra = Math.asin(h_obl_kra / s_kra) * 180 / Math.PI;
+    document.getElementById("kat_kra").value = kat_obl_kra.toFixed(2);
+    alert("Kąt startu = " + kat_obl_kra.toFixed(2) + " stopni");
+}
+</script>
+
+</body>
+</html>
+
+        </textarea>
+    </body>
+</html>
