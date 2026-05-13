@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>zadanie23_kod_krajkowski</title>
+    </head>
+    <body>
+        <textarea name="kod" id="kod" cols="120" rows="52">
+<html>
+    <head>
+        <title>zadanie 23</title>
+    </head>
+    <body>
+        <p>odliczanie odleglosci od drabiny i kata</p>
+        <form onsubmit="temp(); return false">
+            Podaj d= <input type="text" id="d_kra">
+            Podaj x= <input type="text" id="x_kra">
+            <button type="submit">Oblicz</button>
+        </form>
+        <form>
+            drabina: <input type="text" id="pokaz1">
+            alfa: <input type="text" id="pokaz2">
+        </form>
+        <script>
+            function temp() {
+                let d_kra=parseFloat(document.getElementById("d_kra").value);
+                let x_kra=parseFloat(document.getElementById("x_kra").value);
+                pitagoras_krajkowski(d_kra,x_kra);
+                alfa_krajkowski(d_kra,x_kra);
+            }
+            function pitagoras_krajkowski(d_kra,x_kra){
+                let wynik_pitagoras=Math.sqrt((d_kra*d_kra)+(x_kra*x_kra));
+                document.getElementById("pokaz1").value = wynik_pitagoras.toFixed(2);
+                alert(wynik_pitagoras.toFixed(2));
+            }
+            function alfa_krajkowski(d_kra,x_kra){
+                let wynik_alfa = Math.atan2(d_kra, x_kra)*180/Math.PI;
+                document.getElementById("pokaz2").value = wynik_alfa.toFixed(2);
+                alert(wynik_alfa.toFixed(2));
+            }
+        </script>
+    </body>
+</html>
+        </textarea>
+    </body>
+</html>

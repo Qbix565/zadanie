@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>zadanie31_kod_krajkowski</title>
+    </head>
+    <body>
+        <textarea name="kod" id="kod" cols="120" rows="52">
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>zadanie31-krajkowski</title>
+        <script type="text/javascript">
+            function spodnie(rodzaj_s, rozmiar_s, kolor_s, cena_s) {
+                this.rodzaj = rodzaj_s;
+                this.rozmiar = rozmiar_s;
+                this.kolor = kolor_s;
+                this.cena = cena_s;
+            }
+            
+            spodnie.prototype.spodnie_wyswietl_krajkowski = function() {
+                document.write("<p>Rodzaj: " + this.rodzaj + "</p>");
+                document.write("<p>Rozmiar: " + this.rozmiar + "</p>");
+                document.write("<p>Kolor: " + this.kolor + "</p>");
+                document.write("<p>Cena: " + this.cena + " PLN</p>");
+                if(this.marka) {
+                    document.write("<p>Marka: " + this.marka + "</p>");
+                }
+                document.write("<hr>");
+            };
+            
+            spodnie.prototype.marka = "";
+            
+            spodnie.prototype.spodnie_pokaz_krajkowski = function() {
+                alert("Obiekt: spodnie\n" + 
+                      "Rodzaj: " + this.rodzaj + "\n" +
+                      "Rozmiar: " + this.rozmiar + "\n" +
+                      "Kolor: " + this.kolor + "\n" +
+                      "Cena: " + this.cena + " PLN\n" +
+                      "Marka: " + this.marka);
+            };
+            
+            var spodnie1 = new spodnie("Jeans", "32", "Niebieski", 150);
+            spodnie1.marka = "Levis";
+            
+            var spodnie2 = new spodnie("Materiałowe", "L", "Czarny", 200);
+            spodnie2.marka = "Reserved";
+            
+            var spodnie3 = new spodnie("Sportowe", "M", "Szary", 120);
+            spodnie3.marka = "Adidas";
+        </script>
+    </head>
+    <body>
+        <h2>Zadanie 31 - Krajkowski nr 13 - Spodnie (rozszerzone)</h2>
+        
+        <script type="text/javascript">
+            document.write("<h3>Informacje:</h3>");
+            document.write("<p><b>Obiekt:</b> spodnie</p>");
+            document.write("<p><b>Pola:</b> rodzaj, rozmiar, kolor, cena</p>");
+            document.write("<p><b>Nowe pole (prototype):</b> marka</p>");
+            document.write("<p><b>Metoda z zad.30:</b> spodnie_wyswietl_krajkowski()</p>");
+            document.write("<p><b>Nowa metoda (prototype):</b> spodnie_pokaz_krajkowski()</p>");
+            
+            document.write("<h3>Lista:</h3>");
+            spodnie1.spodnie_wyswietl_krajkowski();
+            spodnie2.spodnie_wyswietl_krajkowski();
+            
+            document.write("<button onclick='spodnie1.spodnie_pokaz_krajkowski()'>Pokaż spodnie1</button>");
+        </script>
+        
+        <ul>
+            <li>Obiekt <b>spodnie</b> z zadania 30</li>
+            <li>NOWA WŁAŚCIWOŚĆ: <b>marka</b> (dodana przez prototype)</li>
+            <li>NOWA METODA: <b>spodnie_pokaz_krajkowski()</b> (dodana przez prototype)</li>
+            <li>Numer z dziennika: 13</li>
+        </ul>
+    </body>
+</html>
+        </textarea>
+    </body>
+</html>
