@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <html>
     <body>
         <textarea name="zadanie13_kod_kra" id="kod" cols="110" rows="24">
@@ -125,3 +126,122 @@
     </body>
 </html>
 <!-- Krajkowski Z35_JS -->
+=======
+<html>
+    <body>
+        <textarea name="zadanie41_kod_kra" id="kod" cols="110" rows="30">
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <title>Krajkowski Z41_JS</title>
+    <meta charset="utf-8">
+    <style>
+        h1 { text-transform: uppercase; }
+    </style>
+</head>
+<body>
+    <h1>Proste działania</h1>
+    <label for="a">Podaj pierwszą liczbę:</label>
+    <input type="number" id="a">
+    <br><br>
+    <label for="b">Podaj drugą liczbę:</label>
+    <input type="number" id="b">
+    <br><br>
+    <input type="button" value="DODAWANIE" onclick="suma_kra()">
+    <input type="button" value="ODEJMOWANIE" onclick="roznica_kra()">
+    <input type="button" value="MNOŻENIE" onclick="iloczyn_kra()">
+    <input type="button" value="DZIELENIE" onclick="iloraz_kra()">
+    <input type="button" value="TEORIA-Krajkowski" onclick="teoria_kra()">
+    
+    <div id="wynik" style="margin-top:20px;"></div>
+    
+    <script>
+        function suma_kra() {
+            var a = document.getElementById("a").value;
+            var b = document.getElementById("b").value;
+            if (a == "" || b == "") {
+                document.getElementById("wynik").innerHTML = "Proszę uzupełnić obie liczby.";
+            } else {
+                a = parseFloat(a);
+                b = parseFloat(b);
+                var suma = a + b;
+                document.getElementById("wynik").innerHTML = "Wynik działania wynosi: " + suma.toFixed(2);
+            }
+        }
+        function roznica_kra() {
+            var a = document.getElementById("a").value;
+            var b = document.getElementById("b").value;
+            if (a == "" || b == "") {
+                document.getElementById("wynik").innerHTML = "Proszę uzupełnić obie liczby.";
+            } else {
+                a = parseFloat(a);
+                b = parseFloat(b);
+                var roznica = a - b;
+                document.getElementById("wynik").innerHTML = "Wynik działania wynosi: " + roznica.toFixed(2);
+            }
+        }
+        function iloczyn_kra() {
+            var a = document.getElementById("a").value;
+            var b = document.getElementById("b").value;
+            if (a == "" || b == "") {
+                document.getElementById("wynik").innerHTML = "Proszę uzupełnić obie liczby.";
+            } else {
+                a = parseFloat(a);
+                b = parseFloat(b);
+                var iloczyn = a * b;
+                document.getElementById("wynik").innerHTML = "Wynik działania wynosi: " + iloczyn.toFixed(2);
+            }
+        }
+        function iloraz_kra() {
+            var a = document.getElementById("a").value;
+            var b = document.getElementById("b").value;
+            if (a == "" || b == "") {
+                document.getElementById("wynik").innerHTML = "Proszę uzupełnić obie liczby.";
+            } else {
+                a = parseFloat(a);
+                b = parseFloat(b);
+                if (b == 0) {
+                    document.getElementById("wynik").innerHTML = "Nie wolno dzielić przez zero.";
+                } else {
+                    var iloraz = a / b;
+                    document.getElementById("wynik").innerHTML = "Wynik działania wynosi: " + iloraz.toFixed(2);
+                }
+            }
+        }
+        function teoria_kra() {
+            document.write("<font color=green size=4>pierwsza linia teorii</font><br>");
+            document.write("<font color=red size=4>&lt;label for=&quot;a&quot;&gt;Podaj pierwszą liczbę:&lt;/label&gt; &lt;input type=&quot;number&quot; id=&quot;a&quot;&gt;</font><br>");
+            document.write("<font color=green size=4>Ta linijka kodu HTML tworzy interfejs użytkownika składający się z etykiety opisującej pole i samego pola do wprowadzania danych.</font><br><br>");
+            
+            document.write("<font color=green size=4>druga linia teorii</font><br>");
+            document.write("<font color=red size=4>&lt;input type=&quot;button&quot; value=&quot;DODAWANIE&quot; onclick=&quot;suma_kra()&quot;&gt;</font><br>");
+            document.write("<font color=green size=4>Wykonanie przycisku o nazwie DODAWANIE i z takim samym napisem, kliknięcie myszką uruchamia funkcję suma_kra().</font><br><br>");
+            
+            document.write("<font color=green size=4>trzecia linia teorii</font><br>");
+            document.write("<font color=red size=4>var a = document.getElementById(&quot;a&quot;).value;</font><br>");
+            document.write("<font color=green size=4>Wpisanie do zmiennej &quot;a&quot; wartości z elementu o Id &quot;a&quot; (zbieżność nazw).</font><br><br>");
+            
+            document.write("<font color=green size=4>czwarta linia teorii</font><br>");
+            document.write("<font color=red size=4>if (a == &quot;&quot; || b == &quot;&quot;)</font><br>");
+            document.write("<font color=green size=4>Sprawdzenie czy pola &quot;a&quot; lub &quot;b&quot; są puste.</font><br><br>");
+            
+            document.write("<font color=green size=4>piąta linia teorii</font><br>");
+            document.write("<font color=red size=4>document.getElementById(&quot;wynik&quot;).innerHTML = &quot;Wynik działania wynosi: &quot; + suma;</font><br>");
+            document.write("<font color=green size=4>Pobranie wartości elementu o nazwie &quot;wynik&quot; i wyprowadzenie w oknie przeglądarki tekstu oraz wartości zmiennej.</font><br>");
+        }
+    </script>
+</body>
+</html>
+<!-- Krajkowski Z41_JS -->
+        </textarea>
+        <script lang="JavaScript">
+            function WinClose() {
+                window.close();
+            }
+        </script>
+        <br>
+        <button onclick="WinClose()">zamknij okno</button>
+    </body>
+</html>
+<!-- Krajkowski Z41_KOD -->
+>>>>>>> 831afeb1ec99e8cc6082003bd2c3584b02bde3c1
