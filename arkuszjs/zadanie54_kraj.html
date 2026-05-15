@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <script>
+        let a_kra = 25;
+        let b_kra = 7;
+
+        for(let i=1; i<=b_kra; i++){
+            if(i==1 || i==b_kra){
+                for(let k=1; k<=a_kra; k++){
+                    document.write("*");
+                }
+                document.write("<br>");
+            }else{
+                document.write("*");
+                for(let k=1; k<=a_kra-2; k++){
+                    document.write("&nbsp&nbsp");
+                }
+                document.write("*<br>");
+            }
+        }
+    </script>
+</body>
+</html>
