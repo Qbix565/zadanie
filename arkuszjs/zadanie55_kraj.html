@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <script>
+        let imie = prompt("Podaj swoje imię:");
+        let nazwisko = prompt("Podaj swoje nazwisko:");
+
+        // Oblicz liczbę liter        
+
+        let a_kra = (liczba_liter_nazwiska % 4) + 5;
+        let b_kra = (liczba_liter_imienia % 6) + 20;
+
+        for(let i=1; i<=b_kra; i++){
+            if(i==1 || i==b_kra){
+                for(let k=1; k<=a_kra; k++){
+                    document.write("*");
+                }
+                document.write("<br>");
+            }else{
+                document.write("*");
+                for(let k=1; k<=a_kra-2; k++){
+                    document.write("&nbsp;&nbsp;");
+                }
+                document.write("*<br>");
+            }
+        }
+    </script>
+</body>
+</html>
