@@ -1,0 +1,65 @@
+T: Rodzaje odpornosci
+1. Odpornosc - zdolnosc organizmu do obrony przed cialami obcymi
+a) Elementy ukladu krwionosnego (leukocyty)
+b) Elementy ukladu ruchu (szpik kostny)
+c) Elementy ukladu limfatycznego (grasica, sledziona, wezly chlonne, migdalki)
+
+2. Rodzaje odpornosci
+a) wrodzona (nieswoista) np:
+- skora
+- rzeski w drogach oddechowych
+- kwas solny w zoladku
+- kwasny odczyn w plucach
+- lzy 
+- slina 
+- woskowina w uszach
+
+b) nabyta (swoista)
+- przeciwciala wytworzone po przechorowaniu
+- przeciwciala otrzymane dzieki szczepionce
+- przeciwciala odpornosciowe otrzymane od matki
+
+3. Immunologia
+a) pierwotna odpowiedz immunologiczna (po pierwszym kontakcie z patogenem)
+b) wtorna odpowiedz immunologiczna (przy kolejnym kontakcie z patogenem )
+
+4. linie obrony 
+- pierwsza linia - odpornosc nieswoista (wrodzona) (bariery ochronne np. kaszel, kichanie, skora)
+- druga - nieswoista - granulocyty, makrofagi
+- trzecia - limfocyty T i B, oraz przeciwciala
+
+limfocyty T - lacza sie z patogenem i niszcza go - odpowiedz komorkowa
+limfocyty B - nie lacza sie z patogenem tylko produkuja przeciwciala - odpowiedz humoralna
+
+5. Sposoby nabywania odpornosci swoistych
+a) czynny
+- naturalne (po przebyciu choroby)
+- sztuczny (szczepionka)
+b) bierny
+- naturalne (od matki w ciazy, z mlekiem)
+- sztuczny (surowica)
+
+6. Czym sie rozni szczepiona od surowicy
+szczepionka - to martwe lub oslabione zarazki danej choroby, podawane osobie zdrowej
+surowica - gotowe przeciwciala pobrane od osoby, ktora przechorowala, podawane osobie chorej
+
+T: Zaburzenia odpornosci
+a) Oslabiona odpornosc immunologiczna przewlekle choroby, infekcje, nowotwory, AIDS
+b) Nadmierna odpowiedz immunologiczna - choroby autoimmunologiczne: luszczyca, bielactwo nabyte, reumatoidalne zapalenie stawow, alergie
+
+2. Grupy krwi - A B AB 0
+gr a - w osoczu przeciwciala anty b
+gr b - w osoczu przeciwciala anty a
+gr ab - w osoczu nie ma przeciwecial
+gr 0 - w osoczu przeciwciala anty a i anty b
+
+Uniwersalny dawca - 0
+Uniwersalny biorca - AB
+
+rh 
+rh+ - nie posiada
+rh- - posiada przeciwciala rh
+
+Konflikt serologiczny 
+Serologia to nauka o grupach krwi
+Matka rh -, anty rh a dziecko rh+ po ojcu, konflikt serologiczny

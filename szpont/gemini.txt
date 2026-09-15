@@ -1,0 +1,25 @@
+Biologia – Odporność (Skrót do powtórek)
+1. Rodzaje odporności
+• Wrodzona (nieswoista): pierwsza linia obrony (skóra, ślina, łzy, kwas w żołądku, rzęski). Szybka, ale taka sama na każdy patogen.
+
+• Nabyta (swoista): specyficzna dla danego drobnoustroju, buduje pamięć immunologiczną (pierwotna vs wtórna odpowiedź).
+
+2. Limfocyty (3. linia obrony)
+• Limfocyty T: odpowiedź komórkowa (niszczą patogen bezpośrednio).
+
+• Limfocyty B: odpowiedź humoralna (produukują przeciwciała).
+
+3. Czynna vs Bierna
+• Czynna: organizm sam produkuje przeciwciała (naturalnie: po chorobie; sztucznie: szczepionka). Długotrwała.
+
+• Bierna: dostajesz gotowe przeciwciała (naturalnie: od matki; sztucznie: surowica). Krótkotrwała.
+
+4. Szczepionka vs Surowica
+• Szczepionka: osłabione/martwe patogeny $\rightarrow$ podawana zdrowym (profilaktyka).
+
+• Surowica: gotowe przeciwciała $\rightarrow$ podawana chorym (interwencja).
+
+5. Grupy krwi (AB0) i Konflikt serologiczny
+• Dawca uniwersalny: 0 | Biorca uniwersalny: AB
+
+• Konflikt serologiczny: matka Rh-, dziecko Rh+ (po ojcu). Organizm matki niszczy krwinki dziecka.
